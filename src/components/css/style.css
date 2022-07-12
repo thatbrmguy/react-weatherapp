@@ -1,0 +1,294 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: "Jost",sans-serif;
+    color: white;
+}
+
+body{
+    background: url(https://wallpaperaccess.com/full/220675.jpg);
+    background-size:100%;
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    flex-wrap :wrap;
+    height :100vh;
+    width: 100vw;
+    font-family: "Jost", sems-serif;
+}
+
+html{
+    font-size: 100%;
+    height: 100%;
+}
+
+html{
+    background: #eee;
+}
+
+.box{
+    width: 35vw;
+    height: 60vh;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.1);
+    background: #000000;
+    opacity: 70%;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: #eee;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 300ms infinite liner;
+    z-index: 1;
+}
+
+.wave-three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave.-two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+
+.box:after{
+    content :"";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transfor: rotate(360deg);
+    }
+}
+
+.info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    z-index: 4;
+}
+
+.location{
+    margin-top: 0rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+
+@keyframes rotates{
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+
+#date{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #57606f;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.temp{
+    margin-top: 0rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.tempmin_max{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+#weathercon{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#weathercon.fas{
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+
+@keyframes fas-anime{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 600px){
+    .box{
+        width: 90vw;
+        height: 80vh;
+    }
+    .wave{
+        top: 85%;
+    }
+    #weathercon{
+        font-size: 5em;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height: 500px){
+    .box{
+        height: 80vh;
+    }
+    .wave{
+        top: 115%;
+    }
+}
+
+body > span{
+    width: 100w;
+    text-align: center;
+    color: grey;
+}
+
+.inputData{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField{
+    width: 50%;
+    height: 80%;
+    margin: auto2;
+    border-radius: 5rem;
+    border-color: #eee;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: #000000;
+    opacity: 80%;
+}
+
+.errorMsg{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  #fah{
+    display: none;
+  }
+
+  #tempf{
+    display: none;
+  }
+
+  #feels_likef{
+    display: none;
+  }
+
+  #btncnv{
+    background-color: #2b2a2a;
+    opacity: 60%;
+    margin-top: 4em;
+    color: white;
+    font-weight: bolder;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 10rem;
+  }
+
+  #btncnv:hover{
+    background-color: #2b2a2a;
+    opacity: 100%;
+    margin-top: 4em;
+    color: white;
+    font-weight: bolder;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 10rem;
+  }
