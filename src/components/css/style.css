@@ -6,14 +6,17 @@
 }
 
 body{
-    background: url(https://wallpaperaccess.com/full/220675.jpg);
-    background-size:100%;
+    background-image: url('https://media3.giphy.com/media/Fbox1ygIqnga5dLinz/giphy-downsized-large.gif');
+    background-position: left;
+    background-blend-mode:darken;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: auto;
     display: flex;
     justify-content : center;
     align-items: center;
     flex-wrap :wrap;
-    height :100vh;
-    width: 100vw;
+    /* height : auto; */
     font-family: "Jost", sems-serif;
 }
 
@@ -39,6 +42,22 @@ html{
     min-width: 20rem;
     min-height: 35rem;
 }
+
+.box1{
+    width: 35vw;
+    height: 500vh;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.1);
+    background: #000000;
+    opacity: 70%;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+
+
 
 .wave{
     opacity: 0.3;
@@ -92,16 +111,27 @@ html{
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    margin-left: 5%;
     flex-direction: column;
     width: 100%;
     height: 60vh;
     z-index: 4;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 {
+    margin-top: 5%;
+}
+
 .location{
-    margin-top: 0rem;
+    margin-top: 2rem;
     text-align: center;
+    margin-right: 13%;
     font-weight: 800;
     font-size: 5rem;
     text-transform: capitalize;
@@ -132,11 +162,22 @@ html{
 .temp{
     margin-top: 0rem;
     text-align: center;
+    margin-right: 10%;
+    justify-content: center;
     font-size: 3rem;
 }
 
+.tempdata{
+    margin-top: 3%;
+    margin-left: 4%;
+    text-align: left;
+    margin-right: 10%;
+    justify-content: center;
+}
+
+
 .tempmin_max{
-    text-align: center;
+    text-align: left;
     font-weight: 800;
     font-size: 1.2rem;
     color: #ffffff;
@@ -235,6 +276,11 @@ body > span{
       animation: App-logo-spin infinite 20s linear;
     }
   }
+
+  .forecast {
+    display: flex;
+    margin: 5px;
+  }
   
   .App-header {
     background-color: #282c34;
@@ -274,21 +320,58 @@ body > span{
   #btncnv{
     background-color: #2b2a2a;
     opacity: 60%;
-    margin-top: 4em;
+    margin-top: 2.5%;
     color: white;
     font-weight: bolder;
+    font-size: large;
     border-radius: 1.5rem;
-    height: 20rem;
+    height: 30rem;
     width: 10rem;
   }
 
   #btncnv:hover{
     background-color: #2b2a2a;
     opacity: 100%;
-    margin-top: 4em;
+    margin-top: 2.5%;
     color: white;
     font-weight: bolder;
+    font-size: large;
     border-radius: 1.5rem;
-    height: 20rem;
+    height: 30rem;
     width: 10rem;
   }
+
+#btndet{
+    align-items: right;
+    background-color: #2b2a2a;
+    opacity: 60%;
+    margin-top: 2.5%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 1.5rem;
+    height: 30rem;
+    width: 10rem;
+  }
+
+  #btndet:hover{
+    align-items: right;
+    background-color: #2b2a2a;
+    opacity: 100%;
+    margin-top: 2.5%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 1.5rem;
+    height: 30rem;
+    width: 10rem;
+  }
+
+  .showicon
+  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 12%;
+  }
+  
